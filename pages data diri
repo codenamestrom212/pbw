@@ -1,0 +1,49 @@
+<?php $this->extend('/layout/template');?>
+
+<?php $this->section('content');?>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col">
+        <div class="card">
+    <div class="card-body">
+      <h4 class="card-title">Personal Data</h4>
+       <table class="table table-sm table-borderless">
+        <tr>
+            <td>Name</td>
+            <td>:</td>
+            <td>R. Ario p.</td>
+        </tr>
+        <tr>
+            <td>Birthplace</td>
+            <td>:</td>
+            <td>Pekalongan</td>
+        </tr>
+        <tr>
+            <td>Birth</td>
+            <td>:</td>
+            <td>06 Januari 1999</td>
+        </tr>
+        <tr>
+            <td>Gender</td>
+            <td>:</td>
+            <td>Male</td>
+        </tr>
+        <tr>
+            <td>Religion</td>
+            <td>:</td>
+            <td>Islam</td>
+        </tr>
+        
+        <tr>
+            <td>Address</td>
+            <td>:</td>
+            <td>Tirto Gama permai, Pekalongan</td>
+        </tr>
+    </table>
+      
+    </div>
+  </div>
+        </div>
+    </div>
+</div>
+<?= $this->endSection();?>
