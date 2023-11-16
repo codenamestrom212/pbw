@@ -1,0 +1,30 @@
+<?php
+
+namespace App\controllers;
+
+class produk extends BaseController
+{
+    public function index()
+    {
+        $produkmodel = new \App\Models\ProdukModel();
+        $produk = $produkmodel ->findAll();
+        $data = [
+            'title' => 'produk',
+            'produk' => $produk
+        ];
+
+        return view('pages/produk', $data);
+    }
+    public function detail($kode)
+    {
+        $produkmodel = new \App\Models\ProdukModel();
+        $detail = $produkmodel ->where(['kode' => $kode])->first();
+        $data = [
+            'title' => 'detail',
+            'detail' => $detail
+        ];
+
+        return view('pages/detail', $data);
+    }
+
+}
