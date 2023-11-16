@@ -1,0 +1,92 @@
+<?php
+
+namespace App\Controllers;
+
+class Home extends BaseController
+{
+    // Menampilkan data diri
+    public function index(): string
+    {
+       
+        return view('welcome_message');
+    }
+
+   
+}
+-------------------------------------------------------
+  <?php
+
+
+namespace App\Controllers;
+
+//Mengaktifkan BaseController
+// use App\Controllers\BaseController;
+
+class Pages extends BaseController
+{
+    // Menampilkan data diri
+    public function index()
+    {
+        $data = [
+            // Digunakan untuk judul
+            'title' => 'Data Diri'
+        ];
+        return view('pages/data_diri', $data);
+    }
+
+    // Menampilkan pendidikan
+    public function pendidikan()
+    {
+        $data = [
+            'title' => 'Pendidikan',
+            'education' => [
+                [
+                    'sekolah' => 'SDN TIRTO 03 PEKALONGAN',
+                    'program' => ' - ',
+                    'tahun'  => '2006 - 2012'
+                ],
+
+                [
+                    'sekolah' => 'SMPN 02 PEKALONGAN',
+                    'program' => ' - ',
+                    'tahun' => '2012 - 2015 '
+                ],
+
+                [
+                    'sekolah' => 'SMK MUHAMMADIYAH PEKALONGAN',
+                    'program' => 'TKR',
+                    'tahun' => '2015 - 2018'
+                ],
+
+                [
+                    'sekolah' => 'STMIK Widya Pratama',
+                    'program' => 'Informatics Engineering',
+                    'tahun' => '2022 - Present'
+                ]
+            ]
+        ];
+        return view('pages/pendidikan', $data);
+    }
+
+    // Menampilkan organisasi
+    public function organisasi()
+    {
+        $data = [
+            'title' => 'Organisasi',
+            'experience' => [
+                [
+                    'pengalaman' => 'UKM OLAHRAGA',
+                    'ket' => 'Public Relations',
+                    'tahun' => '2023 - Present'
+                ],
+
+                [
+                    'pengalaman' => 'DPM STMIK WIDYA PRATAMA',
+                    'ket' => 'SEKJEND',
+                    'tahun' => '2023 - Present'
+                ]
+            ]
+        ];
+        return view('pages/organisasi', $data);
+    }
+}
